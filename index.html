@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exchange skills with students and learn together on SkillSwap.">
+    <title>SkillSwap — Learn Together</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <a class="logo" href="#home">
+            <span class="logo-icon">S</span>
+            SkillSwap<span class="logo-dot">.</span>
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#explore">Explore Skills</a>
+            <a href="#how-it-works">How It Works</a>
+        </nav>
+
+        <a class="nav-button" href="#join">Join Community ↗</a>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="eyebrow">
+                    ✦ YOUR SKILLS HAVE VALUE
+                </span>
+
+                <h1>
+                    Learn a skill.<br>
+                    <span>Teach a skill.</span><br>
+                    Grow together.
+                </h1>
+
+                <p class="hero-description">
+                    A community where students exchange knowledge,
+                    discover new talents, and grow together — no money needed.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="primary-button" href="#explore">
+                        Find Your Skill Partner →
+                    </a>
+                    <a class="text-button" href="#how-it-works">
+                        See how it works
+                    </a>
+                </div>
+
+                <div class="hero-proof">
+                    <div class="avatar-stack">
+                        <span>👩🏻</span>
+                        <span>👨🏽</span>
+                        <span>👩🏽</span>
+                    </div>
+                    <p><strong>Learn from each other.</strong><br>
+                    Build skills beyond the classroom.</p>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="floating-note note-top">
+                    <span>✨</span>
+                    Skills are better when shared
+                </div>
+
+                <div class="exchange-card">
+                    <div class="exchange-heading">
+                        <span class="live-dot"></span>
+                        THE PERFECT EXCHANGE
+                    </div>
+
+                    <div class="person-card">
+                        <div class="person-avatar purple">👩🏻‍💻</div>
+                        <div>
+                            <strong>Ananya</strong>
+                            <p>Can teach</p>
+                            <span class="skill-pill">Python</span>
+                        </div>
+                    </div>
+
+                    <div class="swap-symbol">⇅</div>
+
+                    <div class="person-card">
+                        <div class="person-avatar orange">👨🏽‍🎨</div>
+                        <div>
+                            <strong>Rahul</strong>
+                            <p>Can teach</p>
+                            <span class="skill-pill orange-pill">UI Design</span>
+                        </div>
+                    </div>
+
+                    <div class="exchange-footer">
+                        <span>🤝</span>
+                        <div>
+                            <strong>Knowledge exchanged!</strong>
+                            <p>No fees. Just shared skills.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="floating-note note-bottom">
+                    <span>💡</span> Your next skill starts here
+                </div>
+            </div>
+        </section>
+
+        <section class="how-section" id="how-it-works">
+            <div class="section-heading">
+                <span class="eyebrow">SIMPLE BY DESIGN</span>
+                <h2>Learning works both ways.</h2>
+                <p>Three steps to turn what you know into something new.</p>
+            </div>
+
+            <div class="steps-grid">
+                <article class="step-card">
+                    <div class="step-icon lavender">✍️</div>
+                    <span class="step-number">01 / SHARE</span>
+                    <h3>Show what you know</h3>
+                    <p>Add a skill you can teach and something you want to learn.</p>
+                </article>
+
+                <article class="step-card">
+                    <div class="step-icon peach">🔎</div>
+                    <span class="step-number">02 / DISCOVER</span>
+                    <h3>Find your match</h3>
+                    <p>Explore students with skills that complement your own.</p>
+                </article>
+
+                <article class="step-card">
+                    <div class="step-icon mint">🤝</div>
+                    <span class="step-number">03 / EXCHANGE</span>
+                    <h3>Learn together</h3>
+                    <p>Connect, exchange knowledge, and grow your confidence.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="explore-section" id="explore">
+            <div class="section-heading">
+                <span class="eyebrow">YOUR NEXT COLLABORATOR</span>
+                <h2>Meet your skill partners.</h2>
+                <p>Everyone knows something. Everyone has something to learn.</p>
+            </div>
+
+            <div class="search-bar">
+                <span>⌕</span>
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search students or skills..."
+                    aria-label="Search students or skills"
+                >
+                <span class="search-hint">FIND YOUR MATCH</span>
+            </div>
+
+            <div class="filters" id="filters">
+                <button class="filter active" data-category="All">All Skills</button>
+                <button class="filter" data-category="Coding">💻 Coding</button>
+                <button class="filter" data-category="Design">🎨 Design</button>
+                <button class="filter" data-category="Communication">🗣️ Communication</button>
+                <button class="filter" data-category="Other">🌱 Other</button>
+            </div>
+
+            <div class="results-line">
+                <p>STUDENT COMMUNITY</p>
+                <span id="resultCount" aria-live="polite"></span>
+            </div>
+
+            <div class="student-grid" id="studentGrid">
+                <!-- Student cards are generated by script.js -->
+            </div>
+
+            <div class="empty-state" id="emptyState" hidden>
+                <span>🔍</span>
+                <h3>No matching students yet</h3>
+                <p>Try a different skill or search term.</p>
+            </div>
+        </section>
+
+        <section class="join-section" id="join">
+            <div class="join-copy">
+                <span class="eyebrow">YOUR TURN TO SHARE</span>
+                <h2>Know something cool?<br><span>Pass it on.</span></h2>
+                <p>Join the community, share your strengths, and discover what you could learn from someone else.</p>
+                <div class="join-perks">
+                    <span>✓ No money required</span>
+                    <span>✓ Learn at your own pace</span>
+                    <span>✓ Grow together</span>
+                </div>
+            </div>
+
+            <form id="profileForm" class="profile-form">
+                <h3>Create your student profile</h3>
+                <p class="form-intro">Tell the community a little about yourself.</p>
+
+                <label for="studentName">Your name</label>
+                <input id="studentName" name="studentName"
+                       type="text" placeholder="e.g. Priya" required maxlength="40">
+
+                <label for="teachSkill">I can teach</label>
+                <input id="teachSkill" name="teachSkill"
+                       type="text" placeholder="e.g. Python, Canva..." required maxlength="50">
+
+                <label for="learnSkill">I want to learn</label>
+                <input id="learnSkill" name="learnSkill"
+                       type="text" placeholder="e.g. UI Design, Excel..." required maxlength="50">
+
+                <label for="studentCategory">Main skill category</label>
+                <select id="studentCategory" name="studentCategory" required>
+                    <option value="">Choose a category</option>
+                    <option value="Coding">Coding</option>
+                    <option value="Design">Design</option>
+                    <option value="Communication">Communication</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <button class="primary-button submit-button" type="submit">
+                    Join SkillSwap →
+                </button>
+
+                <p class="form-note">Demo version · Your profile is saved in this browser.</p>
+                <p class="form-message" id="formMessage" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a class="logo" href="#home">
+            <span class="logo-icon">S</span>
+            SkillSwap<span class="logo-dot">.</span>
+        </a>
+        <p>Made for curious minds. Built for shared growth.</p>
+        <a href="#home">Back to top ↑</a>
+    </footer>
+
+</body>
+</html>
